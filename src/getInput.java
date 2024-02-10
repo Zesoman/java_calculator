@@ -21,5 +21,18 @@ public class getInput {
         }
         return new float[] {a, b};
     }
+    public static String operation() {
+        Scanner in = new Scanner(System.in);
+        String pattern = "+-*/%";
 
+        while (true) {
+            System.out.println("Input arithmetic operation:");
+            String o = in.nextLine();
+
+            if (pattern.contains(o) && o.length() == 1) {
+                return o;
+            }
+            else System.out.println("Error: invalid operation");
+        }
+    }
 }
